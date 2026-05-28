@@ -1,0 +1,213 @@
+:root {
+  --bg-start: #101922;
+  --bg-end: #192d3f;
+  --panel: rgba(10, 18, 27, 0.68);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #f6f1dc;
+  --muted: #c8d4dc;
+  --accent: #f7b267;
+  --accent-2: #74c69d;
+  --danger: #ff7b72;
+  --radius: 18px;
+  --shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, var(--bg-start), var(--bg-end));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(247, 178, 103, 0.24), transparent 32%),
+    radial-gradient(circle at 85% 88%, rgba(116, 198, 157, 0.24), transparent 30%),
+    linear-gradient(160deg, var(--bg-start), var(--bg-end));
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+#app {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.kicker {
+  color: var(--accent);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-bottom: 6px;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 18px;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.panel h2 {
+  margin-bottom: 4px;
+}
+
+.panel > p {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+#canvas-root {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#canvas-root canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.timer {
+  font-size: clamp(2rem, 5.4vw, 3.5rem);
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.mode {
+  color: var(--accent-2);
+  margin-bottom: 14px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary {
+  background: rgba(247, 178, 103, 0.25);
+  border-color: rgba(247, 178, 103, 0.6);
+}
+
+.btn-secondary {
+  background: rgba(116, 198, 157, 0.2);
+  border-color: rgba(116, 198, 157, 0.56);
+}
+
+.settings {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.settings label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.settings input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 9px 10px;
+  font: inherit;
+  background: rgba(0, 0, 0, 0.22);
+  color: var(--text);
+}
+
+.quote-box {
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.quote-box h3 {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+#quote-text {
+  color: var(--muted);
+  min-height: 44px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 860px) {
+  #app {
+    padding: 14px;
+  }
+
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .actions .btn:first-child {
+    grid-column: 1 / -1;
+  }
+}
