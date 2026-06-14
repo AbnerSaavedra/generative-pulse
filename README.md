@@ -7,6 +7,8 @@ Incluye:
 - Funcion nativa con Capacitor Haptics (vibracion al completar un ciclo).
 - Almacenamiento local con Capacitor Preferences (persistencia de ajustes).
 - Consulta externa configurable y sin API key (por defecto: api.adviceslip.com).
+- Consulta externa personalizada por tema usando la busqueda de Advice Slip API.
+- Traduccion opcional del consejo al espanol para mejorar la legibilidad.
 
 ## Stack
 - Vite
@@ -55,6 +57,8 @@ Incluye:
 ## Notas tecnicas
 - El estado de foco/descanso y la configuracion se guardan localmente mediante `Preferences`.
 - La API externa se llama al iniciar y al finalizar cada ciclo para mostrar un dato util al usuario.
+- El usuario puede definir un tema de consejo para que la consulta sea dinamica y adaptada a su sesion.
+- La interfaz combina temas sugeridos, un tema personalizado opcional y traduccion del consejo al espanol.
 - Si `Haptics` no esta disponible (por ejemplo en navegador), la app sigue funcionando sin fallar.
 
 ## Proceso creativo resumido
@@ -71,6 +75,7 @@ La propuesta adapta el Pomodoro base hacia una experiencia visual generativa. Se
 - BOCETOS_Y_CAPTURAS.md
 - PRUEBAS_Y_MEJORAS.md
 - NOTA_DISPOSITIVO_ANDROID.md
+- PUBLICACION_WEB.md
 - FUENTES_Y_USO_IA.md
 - LICENSE
 
@@ -90,6 +95,7 @@ Incluir:
 - PRUEBAS_Y_MEJORAS.md
 - BOCETOS_Y_CAPTURAS.md
 - NOTA_DISPOSITIVO_ANDROID.md
+- PUBLICACION_WEB.md
 - FUENTES_Y_USO_IA.md
 - LICENSE
 

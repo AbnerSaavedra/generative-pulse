@@ -31,6 +31,10 @@
 
 8. API externa:
 - Se consulta endpoint configurable sin API key.
+- Se probo la consulta personalizada por tema usando la busqueda de Advice Slip API.
+- Se sustituyo la entrada libre por un selector de temas para reducir errores de consulta.
+- Se probo la opcion `Otro tema` para permitir una consulta personalizada adicional.
+- Se anadio traduccion del consejo al espanol mediante servicio externo de traduccion.
 - Se maneja error de red con mensaje al usuario.
 - Evidencia visual asociada: `src/assets/imageActDatoConAPIExterna.png`
 
@@ -41,6 +45,9 @@ La referencia completa de bocetos y capturas se encuentra en `BOCETOS_Y_CAPTURAS
 - Se redujo complejidad del bundle corrigiendo import no soportado de p5.sound.
 - Se ajusto integracion a scripts clasicos desde public, alineado al tutorial.
 - Se agrego guardado de estado para evitar perdida de progreso.
+- Se mejoro la integracion con API para aceptar un tema de consejo y convertir la peticion en dinamica.
+- Se mejoro la experiencia de uso guiando la seleccion del tema y mostrando un mensaje claro cuando no hay coincidencias exactas.
+- Se amplio la accesibilidad del contenido con traduccion opcional al espanol del consejo recuperado.
 
 ## Mejoras futuras sugeridas
 - Añadir pruebas unitarias para funciones de tiempo.
